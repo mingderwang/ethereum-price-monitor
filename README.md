@@ -25,4 +25,4 @@ Donations welcome at 0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC.
 
 It will be available on the app store once I get $5 :)
 
-Thanks :)
+Thanks :) 
