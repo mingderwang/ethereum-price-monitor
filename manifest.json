@@ -1,6 +1,6 @@
   {
     "name": "Ethereum Price Checker",
-    "version": "1.0",
+    "version": "0.1",
     "description": "Simple Ethereum price checker (gdax)",
     "icons": { "48": "icon.png" },
     "permissions": ["https://www.gdax.com/"],
