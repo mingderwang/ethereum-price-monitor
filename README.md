@@ -8,7 +8,7 @@ It adds a little Chrome extension to monitor the price of Ethereum on GDAX. It u
 
 ## How do I install it ?
 
-It's not available in the Chrome app store yet as I need to muster up $5.
+Since I have recently achieved my ultimate business goal of mustering up $5 I will upload this to the Chrome app store asap.
 
 You can just install it manually tho. 
 
@@ -22,6 +22,6 @@ That's It! You should now have a little extension in your Chrome toolbar that sh
 
 Donations welcome at 0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC.
 
-It will be available on the app store once I get $5 :)
+It will be available on the app store once I stop checking gdax and have a chance to upload it :)
 
 Thanks :) 
