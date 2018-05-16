@@ -2,7 +2,7 @@
 
 ## What does it do ?
 
-(screenshot.png)
+![Screenshot](screenshot.png?raw=true "Screenshot")
 
 It adds a little Chrome extension to monitor the price of Ethereum on GDAX. It updates every 10 seconds. Handy for those of you that want to keep an inconspicuous eye on the price of Ether.
 
