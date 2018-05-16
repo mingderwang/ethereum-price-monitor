@@ -13,7 +13,7 @@ You can just install it manually tho.
 
 1. Download the zip [https://github.com/PeanutPete/ethereum-price-monitor/archive/master.zip].
 2. Unzip it to a folder.
-2. Browse to [chrome://chrome/extensions].
+2. Browse to chrome://extensions/.
 3. Turn on developer mode in the top right.
 4. Click the load unpacked button link.
 5. Browse to the unzipped folder and hit open.
