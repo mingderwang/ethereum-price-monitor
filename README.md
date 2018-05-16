@@ -14,7 +14,7 @@ You can just install it manually tho.
 2. Unzip it to a folder.
 2. Browse to chrome://extensions
 3. Turn on developer mode in the top right.
-4. Click the load unpacked button link, browse to the unzipped folder and hit open.
+4. Click the load unpacked button, browse to the unzipped folder and hit open.
 
 That's It! You should now have a little extension in your Chrome toolbar that shows the price of Ether. Yay.
 
