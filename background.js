@@ -11,10 +11,12 @@ function updateData() {
 
 	    var resp = JSON.parse(xhr.responseText);
 
+	    chrome.browserAction.setTitle({title: resp.price });
+
 	    chrome.browserAction.setBadgeText({text:resp.price.substring(0,4)});
 
 	    chrome.browserAction.setBadgeBackgroundColor({
-	    	color : resp.price > lastPrice ? "green" : "red"
+	    	color : resp.price >= lastPrice ? "green" : "red"
 	    });
 
 	    lastPrice = resp.price;
