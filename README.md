@@ -15,7 +15,7 @@ You can just install it manually tho.
 1. Download the zip [https://github.com/PeanutPete/ethereum-price-monitor/archive/master.zip].
 2. Unzip it to a folder.
 2. Browse to chrome://extensions
-3. Turn on developer mode in the top right.
+3. Turn on developer mode in the top right corner.
 4. Click the load unpacked button, browse to the unzipped folder and hit open.
 
 That's It! You should now have a little extension in your Chrome toolbar that shows the price of Ether. Yay.
