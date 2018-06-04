@@ -1,5 +1,9 @@
 var lastPrice = 0;
+var frequency = 5;
 
+chrome.storage.sync.get(['frequency'], function(data) {
+	var frequency = data.frequency  || 5;
+});
 
 function updatePrice() {
 
@@ -42,7 +46,7 @@ function updateData() {
 
 	try { updatePrice(); } catch(e) {}
 
-	window.setTimeout(updateData, 1000 * 5);
+	window.setTimeout(updateData, 1000 * frequency);
 
 	//chrome.storage.sync.onChange(updatePrice);
 }
