@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
+<style>
+  body{
+    background-image: url("background.png");
+    background-repeat: repeat-y; 
+  }
+  a {
+    color: #6d6d6d;
+  }
+  h1,h2,h3,h4,h5 {
+    color: #3d84d6;
+  }
+</style>
   <body>
-    <h3>Simple gdax eth price monitor</h3>
-
+    <h3>Ethereum Monitor</h3>
+    <div>Latest Price: <span id="placeholder_currency"></span> <strong><span id="placeholder_price"></span></strong></div>
+    <h4>Options</h4>
     <div>
     	<span style="margin-right: 20px;">Show Price In : </span>
-		<input type="radio" id="currencyUSD" name="currency" value="USD">
-	    <label for="currencyUSD">USD</label>
-	    <input type="radio" id="currencyEUR" name="currency" value="EUR">
-	    <label for="currencyEUR">EUR</label>
-	    <input type="radio" id="currencyBTC" name="currency" value="BTC">
-	    <label for="currencyBTC">BTC</label>
-	</div>
-
+  		<div><input type="radio" id="currencyUSD" name="currency" value="USD">
+  	    <label for="currencyUSD">USD</label></div>
+  	  <div><input type="radio" id="currencyEUR" name="currency" value="EUR">
+  	    <label for="currencyEUR">EUR</label></div>
+  	  <div><input type="radio" id="currencyBTC" name="currency" value="BTC">
+  	       <label for="currencyBTC">BTC</label></div>
+      <div><input type="button" value="Apply" id="btnApply" name="btnApply"></div>  
+	  </div>
+    <h4>Help</h4>
+    <p>Follow 'Simple <a href="https://www.gdax.com/trade/ETH-">GDAX</a> eth price monitor' development on <a href="https://github.com/PeanutPete/ethereum-price-monitor">Github</a></p>
     <p>Donations welcome at : <p>
-    <a style="outline: none" href="https://etherscan.io/address/0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC">0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC<a>
+    <a style="outline: none" href="https://etherscan.io/address/0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC">0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC</a>
     <p>Thanks :)</p>
     <script src="popup.js"></script>
   </body>

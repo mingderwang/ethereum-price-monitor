@@ -18,13 +18,19 @@ function updatePrice() {
 
 			    chrome.browserAction.setTitle({title: resp.price });
 
-			    chrome.browserAction.setBadgeText({text:resp.price.substring(0,4)});
+			    price = parseFloat(resp.price);
+
+			    price_rounded = Math.round(price);
+
+			    chrome.browserAction.setBadgeText({text:price_rounded.toString()});
 
 			    chrome.browserAction.setBadgeBackgroundColor({
 			    	color : resp.price >= lastPrice ? "green" : "red"
 			    });
 
 			    lastPrice = resp.price;
+			    chrome.storage.sync.set({'price': lastPrice}, function(data) {});
+
 			  }
 			}
 			
@@ -38,9 +44,7 @@ function updateData() {
 
 	window.setTimeout(updateData, 1000 * 5);
 
-
-	chrome.storage.sync.onChange(updatePrice);
+	//chrome.storage.sync.onChange(updatePrice);
 }
 
 updateData();
-
