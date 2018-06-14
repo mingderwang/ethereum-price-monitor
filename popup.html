@@ -16,20 +16,38 @@
           <span id="text_price"></span>
         </label>  
     </h4>
+
     <hr>
+      <div class="form-group" style="text-align: justify;">
+          <table style="width:380px">
+            <tr>
+              <td style="width: 28%"><label class="blue">24h Volume : </label></td><td><span id="text_vol"></span></td>
+              <td><label class="blue">Daily Open : </label></td><td><span id="text_open"></span></td>
+            </tr>
+            <tr>
+              <td style="width: 28%"><label class="blue">Daily High : </label></td><td><span id="text_high"></span></td>
+              <td><label class="blue">Daily Low : </label></td><td><span id="text_low"></span></td>
+            </tr>
+          </table>
+      </div>
+    <hr>
+
     <form>
 
       <div class="form-group">
         <label>Show Price In : </label>
         <div class="btn-group btn-group-justified" data-toggle="buttons">
           <label class="btn btn-primary">
-            <input type="radio" name="ctrl_currency" value="USD" id="ctrl_currencyUSD" checked> USD
+            <input type="radio" name="ctrl_currency" value="USD" id="ctrl_currencyUSD" checked> 
+            <i aria-hidden="true" class="fa fa-usd"></i> USD
           </label>
           <label class="btn btn-primary">
-            <input type="radio" name="ctrl_currency" value="EUR" id="ctrl_currencyEUR"> EUR
+            <input type="radio" name="ctrl_currency" value="EUR" id="ctrl_currencyEUR"> 
+            <i aria-hidden="true" class="fa fa-eur"></i> EUR
           </label>
           <label class="btn btn-primary">
-            <input type="radio" name="ctrl_currency" value="BTC" id="ctrl_currencyBTC"> BTC
+            <input type="radio" name="ctrl_currency" value="BTC" id="ctrl_currencyBTC"> 
+            <i aria-hidden="true" class="fa fa-btc"></i> BTC
           </label>
         </div>
       </div>

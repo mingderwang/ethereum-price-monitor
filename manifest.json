@@ -12,7 +12,7 @@
       }
     },
     "background": {
-      "scripts": ["app/ticker.js", "app/dataModel.js", "app/background.js"],
+      "scripts": ["app/stats.js", "app/ticker.js", "app/dataModel.js", "app/background.js"],
       "persistent": true
     },
 

@@ -1,6 +1,7 @@
 function Model() {
 	this.frequency = 30;
 	this.currency = "USD";
+	this.stats = {};
 	this.price = 0;
 }
 
@@ -25,11 +26,13 @@ Model.prototype.load = function(callback) {
  	chrome.storage.sync.get([
  		'frequency',
  		'currency',
- 		'price'
+ 		'price',
+ 		'stats'
  		], function(data) {
 		self.frequency = data.frequency || self.frequency;
 		self.currency = data.currency || self.currency;
 		self.price = data.price || self.price;
+		self.stats = data.stats || self.stats;
 		if(callback) { callback(); }
 	});
 }
@@ -41,7 +44,8 @@ Model.prototype.save = function(callback) {
 	chrome.storage.sync.set({
 		'frequency': self.frequency,
 		'currency' : self.currency,
-		'price' : self.price
+		'price' : self.price,
+		'stats' : self.stats
 	});
 
 	if(callback) { callback(); }

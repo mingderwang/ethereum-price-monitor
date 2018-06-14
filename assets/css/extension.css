@@ -12,6 +12,10 @@ h1,h2,h3,h4,h5 {
 	color: #3d84d6;
 }
 
+.blue {
+    color: #3d84d6; 
+}
+
 .form-group {
 	margin-top:20px;
 }

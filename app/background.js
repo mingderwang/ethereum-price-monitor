@@ -9,6 +9,7 @@
 	self.process = null;
 
 	self.ticker = new Ticker("ETH","USD");
+	self.stats = new Stats("ETH", "USD");
 
 	self.model = new Model();
 	self.model.onChange(function(prop, oldVal, newVal) {
@@ -35,21 +36,33 @@ BackgroundProcess.prototype.update = function() {
 
 		if(self.process) { clearTimeout(self.process); }
 
-		self.ticker.fetch("ETH", self.model.currency, function(price) {
+		self.stats.fetch("ETH", self.model.currency, function(open, high, low, volume) {
 
-			chrome.browserAction.setTitle({title: price.toString() });
-		    chrome.browserAction.setBadgeText({text:Math.round(parseFloat(price)).toString()});
-		    chrome.browserAction.setBadgeBackgroundColor({
-		    	color : price >= self.model.price ? "green" : "red"
-		    });
+			console.log(open, high, low, volume);
 
-		    if( parseInt(price) != parseInt(self.model.price) ) {
+			self.ticker.fetch("ETH", self.model.currency, function(price) {
 
-			    self.model.load(function() {
-					self.model.price = price;
-					self.model.save();
-				});
-			}
+				chrome.browserAction.setTitle({title: price.toString() });
+			    chrome.browserAction.setBadgeText({text:Math.round(parseFloat(price)).toString()});
+			    chrome.browserAction.setBadgeBackgroundColor({
+			    	color : price >= self.model.price ? "green" : "red"
+			    });
+
+			    if( parseInt(price) != parseInt(self.model.price) ) {
+
+				    self.model.load(function() {
+				    	self.model.price = price;
+				    	self.model.stats = {
+				    		open: open,
+				    		volume: volume,
+				    		high: high,
+				    		low: low
+				    	};
+						self.model.save();
+					});
+				}
+
+			});
 
 		});
 

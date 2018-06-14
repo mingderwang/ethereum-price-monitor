@@ -25,7 +25,11 @@
 	 		txtFrequency : document.getElementById("text_frequency"),
 	 		icnCurrency : document.getElementById("icon_currency"),
 	 		txtCurrency : document.getElementById("text_currency"),
-	 		txtPrice : document.getElementById("text_price")
+	 		txtPrice : document.getElementById("text_price"),
+	 		txtOpen : document.getElementById("text_open"),
+	 		txtHigh : document.getElementById("text_high"),
+	 		txtLow : document.getElementById("text_low"),
+	 		txtVol : document.getElementById("text_vol")
 	 	};
 
 	 	var onCurrencyChange = function(Event) {
@@ -76,8 +80,13 @@ PopupPage.prototype.updateView = function() {
 	var self = this;
 
 	self.model.load(function() {
-		self.controls.txtPrice.innerHTML = Math.round(self.model.price);
+		console.log('udpate view', self.model);
 		self.controls.icnCurrency.className = "fa fa-" + self.model.currency.toLowerCase();
+		self.controls.txtPrice.innerHTML = parseFloat(self.model.price).toFixed(3);
+		self.controls.txtOpen.innerHTML =  parseFloat(self.model.stats.open).toFixed(3);
+		self.controls.txtHigh.innerHTML =  parseFloat(self.model.stats.high).toFixed(3);
+		self.controls.txtLow.innerHTML =  parseFloat(self.model.stats.low).toFixed(3);
+		self.controls.txtVol.innerHTML = Math.round(parseFloat(self.model.stats.volume));
 		self.controls.rngFrequency.value = self.model.frequency;
 		self.controls.txtFrequency.innerHTML = self.model.frequency + " Secs";
 		self.controls.btnCurrency.USD.checked = false;
