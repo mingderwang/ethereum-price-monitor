@@ -38,8 +38,6 @@ BackgroundProcess.prototype.update = function() {
 
 		self.stats.fetch("ETH", self.model.currency, function(open, high, low, volume) {
 
-			console.log(open, high, low, volume);
-
 			self.ticker.fetch("ETH", self.model.currency, function(price) {
 
 				chrome.browserAction.setTitle({title: price.toString() });
