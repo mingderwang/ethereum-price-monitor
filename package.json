@@ -1,0 +1,23 @@
+{
+  "name": "gdax-eth-price",
+  "version": "0.3.0",
+  "description": "Simple ethereum price checker (gdax)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeanutPete/ethereum-price-monitor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeanutPete/ethereum-price-monitor/issues"
+  },
+  "homepage": "https://github.com/PeanutPete/ethereum-price-monitor#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

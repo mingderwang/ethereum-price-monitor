@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html>
+<head>
+ 
+ <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="./assets/css/extension.css">
+</head>
 <style>
-  body{
-    background-image: url("background.png");
-    background-repeat: repeat-y; 
-  }
-  a {
-    color: #6d6d6d;
-  }
-  h1,h2,h3,h4,h5 {
-    color: #3d84d6;
-  }
+
 </style>
   <body>
-    <h3>Ethereum Monitor</h3>
-    <div>Latest Price: <span id="placeholder_currency"></span> <strong><span id="placeholder_price"></span></strong></div>
-    <h4>Options</h4>
-    <div>
-    	<span style="margin-right: 20px;">Show Price In : </span>
-  		<div><input type="radio" id="currencyUSD" name="currency" value="USD">
-  	    <label for="currencyUSD">USD</label></div>
-  	  <div><input type="radio" id="currencyEUR" name="currency" value="EUR">
-  	    <label for="currencyEUR">EUR</label></div>
-  	  <div><input type="radio" id="currencyBTC" name="currency" value="BTC">
-  	       <label for="currencyBTC">BTC</label></div>
+    <div class="container">
+    <h4>Ethereum Price Monitor
+        <label class="pull-right">
+          <i aria-hidden="true" id="icon_currency"></i>
+          <span id="text_price"></span>
+        </label>  
+    </h4>
+    <hr>
+    <form>
 
-      <span style="margin-right: 20px;">Update Frequency (secs): </span>
-      <div><input type="text" id="placeholder_frequency" name="placeholder_frequency" value=""></div>
+      <div class="form-group">
+        <label>Show Price In : </label>
+        <div class="pull-right">
+          <i class="fa fa-euro" aria-hidden="true"></i>
+        </div>  
+        <div class="btn-group btn-group-justified" data-toggle="buttons">
+          <label class="btn btn-primary">
+            <input type="radio" name="ctrl_currency" value="USD" id="ctrl_currencyUSD" checked> USD
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="ctrl_currency" value="EUR" id="ctrl_currencyEUR"> EUR
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="ctrl_currency" value="BTC" id="ctrl_currencyBTC"> BTC
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Update Price Every : </label>
+        <div class="pull-right"><strong id="text_frequency"></strong></div>
+        <input  type="range" class="slider slider-horizontal"
+                id="ctrl_frequency" 
+                name="ctrl_frequency" 
+                min="10" max="60" step="1">
+      </div>
+      
+      <hr>
+
+      <div class="form-group">
+        <label>Donations welcome at :</label>
+        <a style="outline: none" 
+            href="https://etherscan.io/address/0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC">0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC</a>
+      </div>
 
 
-      <div><input type="button" value="Apply" id="btnApply" name="btnApply"></div>  
-	  </div>
-    <h4>Help</h4>
-    <p>Follow 'Simple <a href="https://www.gdax.com/trade/ETH-">GDAX</a> eth price monitor' development on <a href="https://github.com/PeanutPete/ethereum-price-monitor">Github</a></p>
-    <p>Donations welcome at : <p>
-    <a style="outline: none" href="https://etherscan.io/address/0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC">0x4CC792aA6B191ddEfbceb2e0b8c6d043B6EE1bDC</a>
-    <p>Thanks :)</p>
-    <script src="popup.js"></script>
+      <div class="form-group">
+        <label>Follow us on :</label>
+        <div><a href="https://github.com/PeanutPete/ethereum-price-monitor">
+        https://github.com/PeanutPete/ethereum-price-monitor</a></div>
+      </div>
+
+      <hr>
+
+      <div class="form-group">
+        <h5>Thanks :)</h5>
+      </div>
+
+
+    </form>
+    <script src="./app/dataModel.js"></script>
+    <script src="./app/popup.js"></script>
   </body>
 </html>
