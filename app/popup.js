@@ -82,13 +82,12 @@ PopupPage.prototype.updateView = function() {
 	var self = this;
 
 	self.model.load(function() {
-		console.log('udpate view new', self.model);
-		self.controls.txtPrice.innerHTML = self.model.price ? parseFloat(self.model.price).toFixed(3) : "";
-		self.controls.txtOpen.innerHTML =  self.model.stats.open ? parseFloat(self.model.stats.open).toFixed(3) : "";
-		self.controls.txtHigh.innerHTML =  self.model.stats.high ? parseFloat(self.model.stats.high).toFixed(3) : "";
-		self.controls.txtLow.innerHTML =  self.model.stats.low ? parseFloat(self.model.stats.low).toFixed(3) : "";
-		self.controls.txtVol.innerHTML = self.model.stats.volume ? Math.round(parseFloat(self.model.stats.volume)) : "";
-		self.controls.icnCurrency.className = self.model.price ? "fa fa-" + self.model.currency.toLowerCase() : "";
+		self.controls.txtPrice.innerHTML = self.model.price ? parseFloat(self.model.price).toFixed(3) : "...";
+		self.controls.txtOpen.innerHTML =  self.model.stats.open ? parseFloat(self.model.stats.open).toFixed(3) : "...";
+		self.controls.txtHigh.innerHTML =  self.model.stats.high ? parseFloat(self.model.stats.high).toFixed(3) : "...";
+		self.controls.txtLow.innerHTML =  self.model.stats.low ? parseFloat(self.model.stats.low).toFixed(3) : "...";
+		self.controls.txtVol.innerHTML = self.model.stats.volume ? Math.round(parseFloat(self.model.stats.volume)) : "...";
+		self.controls.icnCurrency.className = self.model.price ? "fa fa-" + self.model.currency.toLowerCase() : "...";
 		self.controls.rngFrequency.value = self.model.frequency;
 		self.controls.txtFrequency.innerHTML = self.model.frequency + " Secs";
 		self.controls.btnCurrency.USD.checked = false;
