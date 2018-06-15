@@ -40,8 +40,18 @@ BackgroundProcess.prototype.update = function() {
 
 			self.ticker.fetch("ETH", self.model.currency, function(price) {
 
+			    var badgePrice = parseFloat(price);
+
+			    if( self.model.currency == "BTC" ) {
+			    	badgePrice = badgePrice.toFixed(3).toString().substring(1,5) ;
+			    } else {
+			    	badgePrice = Math.round(badgePrice).toString();
+			    }
+
 				chrome.browserAction.setTitle({title: price.toString() });
-			    chrome.browserAction.setBadgeText({text:Math.round(parseFloat(price)).toString()});
+			    chrome.browserAction.setBadgeText({
+			    	text: badgePrice
+			    });
 			    chrome.browserAction.setBadgeBackgroundColor({
 			    	color : price >= self.model.price ? "green" : "red"
 			    });
