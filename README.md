@@ -1,6 +1,8 @@
 # ethereum-price-monitor
 
-![Screenshot](screenshot.png?raw=true "Screenshot")
+![Screenshot](ScreenShot1.png?raw=true "Screenshot")
+
+![Screenshot](ScreenShot2.png?raw=true "Screenshot")
 
 ## What does it do ?
 
