@@ -49,6 +49,10 @@
 	 	self.controls.btnCurrency.EUR.onclick = onCurrencyChange;
 	 	self.controls.btnCurrency.BTC.onclick = onCurrencyChange;
 		
+		self.controls.rngFrequency.oninput = function(Event) {
+			self.controls.txtFrequency.innerHTML = Event.target.value + " Secs";
+		} 
+
 		self.controls.rngFrequency.onchange = function(Event) {
 			self.model.load( function() {
 				self.model.frequency = Event.target.value;
