@@ -15,7 +15,7 @@ You can install it via the app store or install it manually as below.
 
 App Store 
 
-[https://chrome.google.com/webstore/detail/ethereum-price-checker/pnjahgmogdobjnkeeehjploidboncjke']
+[https://chrome.google.com/webstore/detail/ethereum-price-checker/pnjahgmogdobjnkeeehjploidboncjke]
 
 Manually. 
 
