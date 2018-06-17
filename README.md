@@ -9,9 +9,15 @@ It adds a little Chrome extension to monitor the price of Ethereum on GDAX. It u
 
 ## How do I install it ?
 
-Since I have recently achieved my ultimate business goal of mustering up $5 I will upload this to the Chrome app store asap.
+Since I have recently achieved my ultimate business goal of mustering up $5 I will upload this to the Chrome app store asap. (done)
 
-You can just install it manually tho. 
+You can install it via the app store or install it manually as below.
+
+App Store 
+
+[https://chrome.google.com/webstore/detail/ethereum-price-checker/pnjahgmogdobjnkeeehjploidboncjke']
+
+Manually. 
 
 1. Download the zip [https://github.com/PeanutPete/ethereum-price-monitor/archive/master.zip].
 2. Unzip it to a folder.
