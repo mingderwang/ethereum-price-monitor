@@ -1,7 +1,7 @@
   {
-    "name": "Ethereum Price Checker",
-    "version": "0.4",
-    "description": "Simple Ethereum price checker (gdax)",
+    "name": "Ethereum Price Monitor",
+    "version": "0.5",
+    "description": "Simple Ethereum price monitor (GDAX/Coinbase)",
     "icons": { "48": "assets/img/icon.png" },
     "permissions": ["storage"],
     "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
