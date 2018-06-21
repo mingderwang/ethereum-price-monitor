@@ -14,4 +14,4 @@ ga('set', 'checkProtocolTask', function(){});
 
 ga('require', 'displayfeatures');
 
-ga('send', 'pageview', '/popup.html');
+ga('send', 'pageview', '/ethereum.html');
